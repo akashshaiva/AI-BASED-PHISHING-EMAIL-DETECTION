@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/:path*",
+            "destination": "https://ai-based-phishing-email-detection.onrender.com/api/:path*"
+        }
+    ]
+}

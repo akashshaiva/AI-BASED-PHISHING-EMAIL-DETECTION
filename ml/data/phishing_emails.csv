@@ -1,0 +1,19 @@
+email,label
+"Hi team, the project meeting is scheduled for Thursday at 3 PM in room A-204. Please review the agenda before the meeting.",legitimate
+"Thanks for your update. Please send the latest draft of the report by tomorrow morning.",legitimate
+"The internship application deadline has been extended to next Friday. Please check the portal for details.",legitimate
+"Your participation in the workshop is confirmed. Please bring your ID card for registration.",legitimate
+"Good morning, can you share the weekly status notes before lunch today?",legitimate
+"We have received your invoice and will process the payment within three business days.",legitimate
+"The lab submission is due on Monday. Please upload the final code before 11:59 PM.",legitimate
+"The conference registration is open and the link has been sent to your university email.",legitimate
+"Please confirm your attendance for the seminar by replying to this email.",legitimate
+"URGENT: Your bank account has been suspended. Verify your identity immediately to avoid closure.",phishing
+"Action required: your PayPal account is locked. Click here to secure your account now.",phishing
+"Security alert! We detected a login from a new device. Confirm your password immediately.",phishing
+"Your package delivery failed due to incomplete details. Update your address to receive the parcel.",phishing
+"Final notice: your office 365 account will be deactivated unless you sign in now.",phishing
+"Claim your refund now before it expires. Click the secure link to receive your payment.",phishing
+"Immediate action required: your tax refund is pending verification. Enter your SSN now.",phishing
+"Congratulations! You have won a prize. Click the link to claim your reward today.",phishing
+"Your account has been limited. Verify your credentials to restore access before 24 hours.",phishing

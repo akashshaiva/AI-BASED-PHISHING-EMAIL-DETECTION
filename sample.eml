@@ -1,0 +1,10 @@
+﻿From: sender@example.com
+To: receiver@example.com
+Subject: Test Email
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
+
+Hello team,
+This is a legitimate test message.
+Thanks,
+Sender

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analysis Result - PhishGuard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body data-page="result">
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <span class="brand-mark">AI</span>
+          <span class="ms-2">PhishGuard</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+            <li class="nav-item"><a class="nav-link active" href="result.html">Result</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content py-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-xl-8">
+            <div class="card p-4 shadow-sm result-card border-danger border-2">
+              <div class="card-header bg-danger text-white rounded-top">
+                <h2 class="h4 mb-0 section-title">Analysis Result</h2>
+              </div>
+              <div class="card-body">
+                <div class="result-summary d-flex flex-column flex-md-row align-items-start gap-3">
+                  <div id="resultSummary" class="result-badge p-4 rounded-4 bg-danger text-white text-center shadow-sm">
+                    <h3 id="resultBadgeText" class="mb-2">Loading...</h3>
+                    <p id="resultBadgePercent" class="mb-1 fs-1 fw-bold">--</p>
+                    <span id="resultBadgeRisk" class="badge bg-black text-uppercase">Pending</span>
+                  </div>
+                  <div class="flex-fill">
+                    <p class="mb-2 text-muted">AI-based assessment result for the submitted email.</p>
+                    <div class="row g-3">
+                      <div class="col-sm-6">
+                        <div class="metric-card p-3 rounded-4 bg-secondary text-white">
+                          <small class="text-uppercase text-muted">Confidence</small>
+                          <div id="confidenceValue" class="h3 mb-0">--</div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="metric-card p-3 rounded-4 bg-secondary text-white">
+                          <small class="text-uppercase text-muted">Risk Level</small>
+                          <div id="riskLevelValue" class="h3 mb-0">--</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+ 
+                <div class="mt-4">
+                  <h3 class="h5">Detected Suspicious Indicators</h3>
+                  <ul id="indicatorList" class="indicator-list list-unstyled mt-3">
+                    <li><span class="dot bg-secondary"></span>Loading indicators...</li>
+                  </ul>
+                </div>
+ 
+                <div class="row gy-4 mt-4">
+                  <div class="col-md-6">
+                    <div class="card card-soft p-3 border-secondary">
+                      <h4 class="h6 text-uppercase text-muted mb-3">Explanation</h4>
+                      <p id="explanationText">Loading explanation...</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card card-soft p-3 border-secondary">
+                      <h4 class="h6 text-uppercase text-muted mb-3">Recommendation</h4>
+                      <p id="recommendationText">Loading recommendation...</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row gy-4 mt-4">
+                 <div class="col-md-6">
+                   <div class="card card-soft p-3 border-secondary">
+                     <h4 class="h6 text-uppercase text-muted mb-3">Reasons</h4>
+                     <ul id="reasonsList" class="list-unstyled mb-0"></ul>
+                   </div>
+                 </div>
+                 <div class="col-md-6">
+                   <div class="card card-soft p-3 border-secondary">
+                     <h4 class="h6 text-uppercase text-muted mb-3">Model Confidence</h4>
+                     <p id="modelConfidenceText" class="mb-0">Loading confidence...</p>
+                   </div>
+                 </div>
+                </div>
+
+                <div class="row gy-4 mt-4">
+                 <div class="col-lg-6">
+                   <div class="card card-soft p-3 border-secondary">
+                     <h4 class="h6 text-uppercase text-muted mb-3">URL Analysis</h4>
+                     <div id="urlAnalysisContent">Loading URL analysis...</div>
+                   </div>
+                 </div>
+                 <div class="col-lg-6">
+                   <div class="card card-soft p-3 border-secondary">
+                     <h4 class="h6 text-uppercase text-muted mb-3">Header Analysis</h4>
+                     <div id="headerAnalysisContent">Loading header analysis...</div>
+                   </div>
+                 </div>
+                </div>
+
+                <div class="row gy-4 mt-4">
+                 <div class="col-12">
+                   <div class="card card-soft p-3 border-secondary">
+                     <h4 class="h6 text-uppercase text-muted mb-3">Screenshot Risk Review</h4>
+                     <div id="screenshotAnalysisContent">Loading screenshot analysis...</div>
+                   </div>
+                 </div>
+                </div>
+  
+                <div class="mt-4 text-end">
+                  <a class="btn btn-outline-danger btn-lg" href="index.html">Scan Another Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="card p-4 shadow-sm sidebar-card">
+              <div class="card-body">
+                <h3 class="h5 mb-3">Quick Notes</h3>
+                <p class="text-muted">Use the dashboard to monitor trends and review past predictions from the live backend analysis API.</p>
+                <div class="stats-list mt-4">
+                  <div class="d-flex justify-content-between mb-3">
+                    <span>Total Scanned</span><strong id="quickTotalScans">--</strong>
+                  </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <span>Phishing Alerts</span><strong id="quickPhishingCount">--</strong>
+                  </div>
+                  <div class="d-flex justify-content-between mb-3">
+                    <span>Safe Emails</span><strong id="quickLegitimateCount">--</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer py-4 bg-black text-white">
+      <div class="container text-center small">PhishGuard — AI-powered security insights for your inbox</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
